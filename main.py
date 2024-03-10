@@ -1,15 +1,13 @@
+def sort_on(dict):
+    return dict["count"]
+
 book_to_sort = "books/frankenstein.txt"
 
 with open(book_to_sort) as f:
     file_contents = f.read()
 
-def sort_on(dict):
-    return dict["count"]
-
-# words = file_contents.split()
 counts = {}
 counts_list = []
-# for word in words:
 for letter in file_contents:
     if str(letter).isalpha():
         if counts.get(letter.lower()) != None:
